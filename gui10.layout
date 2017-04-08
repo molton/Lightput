@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Release" />
+	<File name="AlarmClock.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="16941" topLine="343" />
+	</File>
+	<File name="BlinkSequencer.cpp" open="1" top="1" tabpos="4">
+		<Cursor position="172024" topLine="2642" />
+	</File>
+	<File name="ExtenalInput.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="4953" topLine="90" />
+	</File>
+	<File name="ExtenalInput.h" open="0" top="0" tabpos="7">
+		<Cursor position="431" topLine="6" />
+	</File>
+	<File name="FTDI_interface.cpp" open="0" top="0" tabpos="1">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="FTDI_interface.h" open="0" top="0" tabpos="12">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="H24Timer.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="26784" topLine="436" />
+	</File>
+	<File name="LightPrograms.cpp" open="0" top="0" tabpos="2">
+		<Cursor position="11091" topLine="310" />
+	</File>
+	<File name="LightPrograms.h" open="0" top="0" tabpos="6">
+		<Cursor position="958" topLine="0" />
+	</File>
+	<File name="LightScripts.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="LightScripts.h" open="0" top="0" tabpos="2">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="MidiControl.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="33005" topLine="486" />
+	</File>
+	<File name="MidiControl.h" open="0" top="0" tabpos="3">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="NewDialog.cpp" open="0" top="0" tabpos="11">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="Options.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="26451" topLine="661" />
+	</File>
+	<File name="VSXuAudioVisualizer.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="1191" topLine="75" />
+	</File>
+	<File name="ftd2xx.h" open="0" top="0" tabpos="5">
+		<Cursor position="2115" topLine="60" />
+	</File>
+	<File name="gui10Main.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="12497" topLine="399" />
+	</File>
+	<File name="gui10Main.h" open="0" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="lsLoadDialog.cpp" open="0" top="0" tabpos="6">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="lsOverwriteScript.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="lsSaveChangesDialog.cpp" open="0" top="0" tabpos="8">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="lsSaveDialog.cpp" open="0" top="0" tabpos="9">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="wxMidi.cpp" open="0" top="0" tabpos="3">
+		<Cursor position="0" topLine="3" />
+	</File>
+	<File name="wxMidi.h" open="0" top="0" tabpos="6">
+		<Cursor position="964" topLine="15" />
+	</File>
+	<File name="wxMidiDatabase.cpp" open="0" top="0" tabpos="0">
+		<Cursor position="11287" topLine="254" />
+	</File>
+</CodeBlocks_layout_file>

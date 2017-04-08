@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="BlinkSequencer">
+		<title>Light Sequencer 0.3</title>
+		<centered>1</centered>
+		<pos>100,100</pos>
+		<size>859,475</size>
+		<id_arg>0</id_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<label>Light Sequence</label>
+			<pos>40,120</pos>
+			<size>784,224</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX4" variable="StaticBox4" member="yes">
+			<label>Current Channel</label>
+			<pos>56,144</pos>
+			<size>160,56</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX3" variable="StaticBox3" member="yes">
+			<label>Light Sequence Configuration</label>
+			<pos>40,8</pos>
+			<size>344,104</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+			<label>Light Sequence Profiles</label>
+			<pos>392,8</pos>
+			<size>432,104</size>
+		</object>
+		<object class="wxChoice" name="ID_CHOICE1" variable="Choice1" member="yes">
+			<content>
+				<item>2</item>
+				<item>3</item>
+				<item>4</item>
+				<item>5</item>
+				<item>6</item>
+				<item>7</item>
+				<item>8</item>
+				<item>9</item>
+				<item>10</item>
+				<item>11</item>
+				<item>12</item>
+			</content>
+			<selection>0</selection>
+			<pos>215,28</pos>
+			<size>56,21</size>
+			<focused>1</focused>
+			<exstyle>wxWS_EX_VALIDATE_RECURSIVELY</exstyle>
+			<handler function="OnChoice1Select" entry="EVT_CHOICE" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER1" variable="Slider1" member="yes">
+			<max>255</max>
+			<pos>240,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider1CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider1CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER2" variable="Slider2" member="yes">
+			<max>255</max>
+			<pos>286,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider2CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider2CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER3" variable="Slider3" member="yes">
+			<max>255</max>
+			<pos>334,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider3CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider3CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER4" variable="Slider4" member="yes">
+			<max>255</max>
+			<pos>382,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider4CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider4CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER5" variable="Slider5" member="yes">
+			<max>255</max>
+			<pos>430,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider5CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider5CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER6" variable="Slider6" member="yes">
+			<max>255</max>
+			<pos>478,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider6CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider6CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER7" variable="Slider7" member="yes">
+			<max>255</max>
+			<pos>526,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider7CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider7CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER8" variable="Slider8" member="yes">
+			<max>255</max>
+			<pos>574,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider8CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider8CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER9" variable="Slider9" member="yes">
+			<max>255</max>
+			<pos>622,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider9CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider9CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER10" variable="Slider10" member="yes">
+			<max>255</max>
+			<pos>670,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider10CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider10CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER11" variable="Slider11" member="yes">
+			<max>255</max>
+			<pos>718,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider11CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider11CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxSlider" name="ID_SLIDER12" variable="Slider12" member="yes">
+			<max>255</max>
+			<pos>766,160</pos>
+			<size>24,136</size>
+			<style>wxSL_VERTICAL|wxSL_BOTH|wxSL_INVERSE</style>
+			<handler function="OnSlider12CmdScroll" entry="EVT_COMMAND_SCROLL_CHANGED" />
+			<handler function="OnSlider12CmdScroll" entry="EVT_COMMAND_SLIDER_UPDATED" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>1</label>
+			<pos>247,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>2</label>
+			<pos>295,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>3</label>
+			<pos>343,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+			<label>4</label>
+			<pos>391,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+			<label>5</label>
+			<pos>439,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+			<label>6</label>
+			<pos>487,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+			<label>7</label>
+			<pos>535,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT8" variable="StaticText8" member="yes">
+			<label>8</label>
+			<pos>583,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT9" variable="StaticText9" member="yes">
+			<label>9</label>
+			<pos>631,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT10" variable="StaticText10" member="yes">
+			<label>10</label>
+			<pos>676,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT11" variable="StaticText11" member="yes">
+			<label>11</label>
+			<pos>724,136</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT12" variable="StaticText12" member="yes">
+			<label>12</label>
+			<pos>772,136</pos>
+		</object>
+		<object class="wxChoice" name="ID_CHOICE3" variable="Choice3" member="yes">
+			<content>
+				<item>Channel 1</item>
+				<item>Channel 2</item>
+				<item>Channel 3</item>
+				<item>Channel 4</item>
+				<item>Channel 5</item>
+				<item>Channel 6</item>
+				<item>Channel 7</item>
+				<item>Channel 8</item>
+				<item>Channel 9</item>
+				<item>Channel 10</item>
+				<item>Channel 11</item>
+				<item>Channel 12</item>
+				<item>Channel 13</item>
+				<item>Channel 14</item>
+				<item>Channel 15</item>
+				<item>Channel 16</item>
+			</content>
+			<selection>0</selection>
+			<pos>80,168</pos>
+			<size>112,21</size>
+			<handler function="OnChoice3Select" entry="EVT_CHOICE" />
+		</object>
+		<object class="wxListBox" name="ID_LISTBOX1" variable="ListBox1" member="yes">
+			<content>
+				<item>-Empty Profile List-</item>
+			</content>
+			<pos>504,24</pos>
+			<size>264,80</size>
+			<focused>1</focused>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnListBox1Select" entry="EVT_LISTBOX" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON3" variable="Button3" member="yes">
+			<label>Rename</label>
+			<pos>408,52</pos>
+			<handler function="OnButton3Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON4" variable="Button4" member="yes">
+			<label>Delete</label>
+			<pos>408,80</pos>
+			<handler function="OnButton4Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT13" variable="StaticText13" member="yes">
+			<label>Number of beats in sequence:</label>
+			<pos>48,32</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxButton" name="ID_BUTTON5" variable="Button5" member="yes">
+			<label>Start</label>
+			<pos>40,408</pos>
+			<size>112,32</size>
+			<handler function="OnButton5Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes">
+			<value>1000</value>
+			<pos>128,52</pos>
+			<size>64,21</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnTextCtrl1Text" entry="EVT_TEXT" />
+			<handler function="OnTextCtrl1TextEnter" entry="EVT_TEXT_ENTER" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT16" variable="StaticText16" member="yes">
+			<label>Time per beat:</label>
+			<pos>48,56</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT14" variable="StaticText14" member="yes">
+			<label>milliseconds.</label>
+			<pos>200,56</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxButton" name="ID_BUTTON6" variable="Button6" member="yes">
+			<label>Move&#x0A;Up</label>
+			<pos>768,24</pos>
+			<size>48,40</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton6Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON7" variable="Button7" member="yes">
+			<label>Move&#x0A;Down</label>
+			<pos>768,64</pos>
+			<size>48,40</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton7Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT17" variable="StaticText17" member="yes">
+			<label>Label</label>
+			<pos>240,304</pos>
+			<style>wxALIGN_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT19" variable="StaticText19" member="yes">
+			<label>Label</label>
+			<pos>288,304</pos>
+			<style>wxALIGN_CENTRE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT20" variable="StaticText20" member="yes">
+			<label>Label</label>
+			<pos>336,304</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT21" variable="StaticText21" member="yes">
+			<label>Label</label>
+			<pos>384,304</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT22" variable="StaticText22" member="yes">
+			<label>Label</label>
+			<pos>432,304</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT23" variable="StaticText23" member="yes">
+			<label>Label</label>
+			<pos>480,304</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT24" variable="StaticText24" member="yes">
+			<label>Label</label>
+			<pos>528,304</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT25" variable="StaticText25" member="yes">
+			<label>Label</label>
+			<pos>576,304</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT26" variable="StaticText26" member="yes">
+			<label>Label</label>
+			<pos>624,304</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT27" variable="StaticText27" member="yes">
+			<label>Label</label>
+			<pos>672,304</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT28" variable="StaticText28" member="yes">
+			<label>Label</label>
+			<pos>720,304</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT29" variable="StaticText29" member="yes">
+			<label>Label</label>
+			<pos>768,304</pos>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+			<label>Pause</label>
+			<pos>176,408</pos>
+			<size>112,32</size>
+			<enabled>0</enabled>
+			<handler function="OnButton1Click1" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT30" variable="StaticText30" member="yes">
+			<label></label>
+			<pos>240,320</pos>
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
+			<label>New</label>
+			<pos>408,24</pos>
+			<handler function="OnButton2Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxRadioButton" name="ID_RADIOBUTTON1" variable="RadioButton1" member="yes">
+			<label>Blink</label>
+			<pos>112,80</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnRadioButton1Select" entry="EVT_RADIOBUTTON" />
+		</object>
+		<object class="wxRadioButton" name="ID_RADIOBUTTON2" variable="RadioButton2" member="yes">
+			<label>Smooth</label>
+			<pos>168,80</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnRadioButton2Select" entry="EVT_RADIOBUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT31" variable="StaticText31" member="yes">
+			<label>Transition</label>
+			<pos>48,82</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX1" variable="CheckBox1" member="yes">
+			<label>Smooth Start</label>
+			<pos>256,80</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnCheckBox1Click1" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON9" variable="Button9" member="yes">
+			<label>Set Tempo</label>
+			<pos>296,46</pos>
+			<handler function="OnButton9Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT15" variable="StaticText15" member="yes">
+			<label>Or</label>
+			<pos>276,56</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxChoice" name="ID_CHOICE2" variable="Choice2" member="yes">
+			<content>
+				<item>1</item>
+				<item>2</item>
+				<item>3</item>
+				<item>4</item>
+				<item>5</item>
+				<item>6</item>
+				<item>7</item>
+				<item>8</item>
+				<item>9</item>
+				<item>10</item>
+				<item>11</item>
+				<item>12</item>
+			</content>
+			<selection>0</selection>
+			<pos>128,376</pos>
+			<size>40,21</size>
+			<handler function="OnChoice2Select1" entry="EVT_CHOICE" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT18" variable="StaticText18" member="yes">
+			<label>Start On Beat</label>
+			<pos>40,380</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT32" variable="StaticText32" member="yes">
+			<label>note: The maximum amount of time each beat will run, 9999999 ms, is about 2 hours and 46 and &#x0A;a half minutes, 7200000 ms is an even 2 hours per beat and makes the light sequencer run for a &#x0A;complete 24 hours before returning to beat 1 and the original color.  60 ms is the minimum.&#x0A;&#x0A;note: The easiest way to visualize the changes you are making to the light pattern is to adjust &#x0A;the beat time to 1000-3000 ms, start the sequencer, and pause it on the beat you want to &#x0A;change and change the pattern while paused</label>
+			<pos>320,350</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxButton" name="ID_BUTTON8" variable="Button8" member="yes">
+			<label>Hide Lightput</label>
+			<pos>744,0</pos>
+			<size>115,24</size>
+			<handler function="OnButton8Click2" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX5" variable="StaticBox5" member="yes">
+			<label>Exempt Channels</label>
+			<pos>56,208</pos>
+			<size>168,120</size>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX2" variable="CheckBox2" member="yes">
+			<label>1</label>
+			<pos>72,232</pos>
+			<handler function="OnCheckBox2Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX3" variable="CheckBox3" member="yes">
+			<label>2</label>
+			<pos>104,232</pos>
+			<handler function="OnCheckBox3Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX4" variable="CheckBox4" member="yes">
+			<label>3</label>
+			<pos>136,232</pos>
+			<handler function="OnCheckBox4Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX5" variable="CheckBox5" member="yes">
+			<label>4</label>
+			<pos>168,232</pos>
+			<handler function="OnCheckBox5Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX6" variable="CheckBox6" member="yes">
+			<label>5</label>
+			<pos>72,256</pos>
+			<handler function="OnCheckBox6Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX7" variable="CheckBox7" member="yes">
+			<label>6</label>
+			<pos>104,256</pos>
+			<handler function="OnCheckBox7Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX8" variable="CheckBox8" member="yes">
+			<label>7</label>
+			<pos>136,256</pos>
+			<handler function="OnCheckBox8Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX9" variable="CheckBox9" member="yes">
+			<label>8</label>
+			<pos>168,256</pos>
+			<handler function="OnCheckBox9Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX10" variable="CheckBox10" member="yes">
+			<label>9</label>
+			<pos>72,280</pos>
+			<handler function="OnCheckBox10Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX11" variable="CheckBox11" member="yes">
+			<label>10</label>
+			<pos>104,280</pos>
+			<handler function="OnCheckBox11Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX12" variable="CheckBox12" member="yes">
+			<label>11</label>
+			<pos>136,280</pos>
+			<handler function="OnCheckBox12Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX13" variable="CheckBox13" member="yes">
+			<label>12</label>
+			<pos>168,280</pos>
+			<handler function="OnCheckBox13Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX14" variable="CheckBox14" member="yes">
+			<label>13</label>
+			<pos>72,304</pos>
+			<handler function="OnCheckBox14Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX15" variable="CheckBox15" member="yes">
+			<label>14</label>
+			<pos>104,304</pos>
+			<handler function="OnCheckBox15Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX16" variable="CheckBox16" member="yes">
+			<label>15</label>
+			<pos>136,304</pos>
+			<handler function="OnCheckBox16Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX17" variable="CheckBox17" member="yes">
+			<label>16</label>
+			<pos>168,304</pos>
+			<handler function="OnCheckBox17Click" entry="EVT_CHECKBOX" />
+		</object>
+		<object class="wxTimer" name="ID_TIMER1" variable="Timer1" member="yes">
+			<handler function="OnTimer1Trigger" entry="EVT_TIMER" />
+		</object>
+		<object class="wxStopWatch" variable="StopWatch1" member="yes" />
+	</object>
+</wxsmith>

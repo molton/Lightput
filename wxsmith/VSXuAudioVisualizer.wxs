@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="VSXuAudioVisualizer">
+		<title>Vovoid VSXu -&gt; Lightput 0.2</title>
+		<size>573,552</size>
+		<focused>1</focused>
+		<id_arg>0</id_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>VSXu Audio Visualizer -&gt; Lightput</label>
+			<pos>16,16</pos>
+			<font>
+				<size>16</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="StartButton" member="yes">
+			<label>Start VSXu</label>
+			<pos>168,504</pos>
+			<size>176,32</size>
+			<font>
+				<size>10</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnStartButtonClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="NextButton" member="yes">
+			<label>Next Visual</label>
+			<pos>304,456</pos>
+			<size>112,29</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnNextButtonClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON3" variable="PreviousButton" member="yes">
+			<label>Previous Visual</label>
+			<pos>168,456</pos>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnPreviousButtonClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>Select which channels change with the VSXu audio visuals before &#x0A;starting.  Exempt channels stay on whatever the profile was set as&#x0A;and are exempt from this light program. Change the visuals with the &#x0A;next and previous visual buttons.  Some visuals may not work&#x0A;correctly or well with Lightput. </label>
+			<pos>184,360</pos>
+			<size>352,26</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER1" variable="Slider1" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>40,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER2" variable="Slider2" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>72,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER3" variable="Slider3" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>104,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER4" variable="Slider4" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>136,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER5" variable="Slider5" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>168,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER6" variable="Slider6" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>200,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER7" variable="Slider7" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>232,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER8" variable="Slider8" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>264,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER9" variable="Slider9" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>296,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER10" variable="Slider10" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>328,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER11" variable="Slider11" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>360,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER12" variable="Slider12" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>392,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER13" variable="Slider13" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>424,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER14" variable="Slider14" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>456,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER15" variable="Slider15" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>488,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxSlider" name="ID_SLIDER16" variable="Slider16" member="yes">
+			<value>127</value>
+			<max>255</max>
+			<pos>520,80</pos>
+			<size>27,104</size>
+			<style>wxSL_VERTICAL|wxSL_INVERSE</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>Channel:</label>
+			<pos>16,48</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+			<label>1</label>
+			<pos>48,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+			<label>2</label>
+			<pos>80,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+			<label>3</label>
+			<pos>112,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+			<label>4</label>
+			<pos>144,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT8" variable="StaticText8" member="yes">
+			<label>5</label>
+			<pos>176,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT9" variable="StaticText9" member="yes">
+			<label>6</label>
+			<pos>208,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT10" variable="StaticText10" member="yes">
+			<label>7</label>
+			<pos>240,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT11" variable="StaticText11" member="yes">
+			<label>8</label>
+			<pos>272,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT12" variable="StaticText12" member="yes">
+			<label>9</label>
+			<pos>304,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT13" variable="StaticText13" member="yes">
+			<label>10</label>
+			<pos>336,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT14" variable="StaticText14" member="yes">
+			<label>11</label>
+			<pos>368,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT15" variable="StaticText15" member="yes">
+			<label>12</label>
+			<pos>400,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT16" variable="StaticText16" member="yes">
+			<label>13</label>
+			<pos>432,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT17" variable="StaticText17" member="yes">
+			<label>14</label>
+			<pos>464,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT18" variable="StaticText18" member="yes">
+			<label>15</label>
+			<pos>496,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT19" variable="StaticText19" member="yes">
+			<label>16</label>
+			<pos>528,64</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxChoice" name="ID_CHOICE1" variable="Choice1" member="yes">
+			<content>
+				<item>None</item>
+				<item>Channel 1</item>
+				<item>Channel 2</item>
+				<item>Channel 3</item>
+				<item>Channel 4</item>
+				<item>Channel 5</item>
+				<item>Channel 6</item>
+				<item>Channel 7</item>
+				<item>Channel 8</item>
+				<item>Channel 9</item>
+				<item>Channel 10</item>
+				<item>Channel 11</item>
+				<item>Channel 12</item>
+				<item>Channel 13</item>
+				<item>Channel 14</item>
+				<item>Channel 15</item>
+				<item>Channel 16</item>
+			</content>
+			<selection>1</selection>
+			<pos>176,208</pos>
+			<size>112,29</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnChoice1Select" entry="EVT_CHOICE" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT20" variable="StaticText20" member="yes">
+			<label>VSXu Red -&gt; Lighput</label>
+			<pos>56,216</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT21" variable="StaticText21" member="yes">
+			<label>VSXu Green -&gt; Lighput</label>
+			<pos>40,256</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT22" variable="StaticText22" member="yes">
+			<label>VSXu Blue -&gt; Lighput</label>
+			<pos>320,216</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT23" variable="StaticText23" member="yes">
+			<label>VSXu RGB -&gt; Lighput</label>
+			<pos>328,256</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxChoice" name="ID_CHOICE2" variable="Choice2" member="yes">
+			<content>
+				<item>None</item>
+				<item>Channel 1</item>
+				<item>Channel 2</item>
+				<item>Channel 3</item>
+				<item>Channel 4</item>
+				<item>Channel 5</item>
+				<item>Channel 6</item>
+				<item>Channel 7</item>
+				<item>Channel 8</item>
+				<item>Channel 9</item>
+				<item>Channel 10</item>
+				<item>Channel 11</item>
+				<item>Channel 12</item>
+				<item>Channel 13</item>
+				<item>Channel 14</item>
+				<item>Channel 15</item>
+				<item>Channel 16</item>
+			</content>
+			<selection>2</selection>
+			<pos>176,248</pos>
+			<size>112,29</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxChoice" name="ID_CHOICE3" variable="Choice3" member="yes">
+			<content>
+				<item>None</item>
+				<item>Channel 1</item>
+				<item>Channel 2</item>
+				<item>Channel 3</item>
+				<item>Channel 4</item>
+				<item>Channel 5</item>
+				<item>Channel 6</item>
+				<item>Channel 7</item>
+				<item>Channel 8</item>
+				<item>Channel 9</item>
+				<item>Channel 10</item>
+				<item>Channel 11</item>
+				<item>Channel 12</item>
+				<item>Channel 13</item>
+				<item>Channel 14</item>
+				<item>Channel 15</item>
+				<item>Channel 16</item>
+			</content>
+			<selection>3</selection>
+			<pos>448,208</pos>
+			<size>112,29</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxChoice" name="ID_CHOICE4" variable="Choice4" member="yes">
+			<content>
+				<item>None</item>
+				<item>Channel 1</item>
+				<item>Channel 2</item>
+				<item>Channel 3</item>
+				<item>Channel 4</item>
+				<item>Channel 5</item>
+				<item>Channel 6</item>
+				<item>Channel 7</item>
+				<item>Channel 8</item>
+				<item>Channel 9</item>
+				<item>Channel 10</item>
+				<item>Channel 11</item>
+				<item>Channel 12</item>
+				<item>Channel 13</item>
+				<item>Channel 14</item>
+				<item>Channel 15</item>
+				<item>Channel 16</item>
+			</content>
+			<selection>0</selection>
+			<pos>448,248</pos>
+			<size>112,29</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT24" variable="StaticText24" member="yes">
+			<label>VSXu Color Bias (Lower number, brighter output)</label>
+			<pos>176,292</pos>
+			<size>80,13</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxChoice" name="ID_CHOICE5" variable="Choice5" member="yes">
+			<content>
+				<item>0</item>
+				<item>1</item>
+				<item>2</item>
+				<item>3</item>
+				<item>4</item>
+				<item>5</item>
+				<item>6</item>
+				<item>7</item>
+				<item>8</item>
+				<item>9</item>
+				<item>10</item>
+				<item>11</item>
+				<item>12</item>
+				<item>13</item>
+				<item>14</item>
+				<item>15</item>
+				<item>16</item>
+				<item>17</item>
+				<item>18</item>
+				<item>19</item>
+				<item>20</item>
+				<item>21</item>
+				<item>22</item>
+				<item>23</item>
+				<item>24</item>
+				<item>25</item>
+				<item>26</item>
+				<item>27</item>
+				<item>28</item>
+				<item>29</item>
+				<item>30</item>
+				<item>31</item>
+				<item>32</item>
+				<item>33</item>
+				<item>34</item>
+				<item>35</item>
+				<item>36</item>
+				<item>37</item>
+				<item>38</item>
+				<item>39</item>
+				<item>40</item>
+				<item>41</item>
+				<item>42</item>
+				<item>43</item>
+				<item>44</item>
+				<item>45</item>
+				<item>46</item>
+				<item>47</item>
+				<item>48</item>
+				<item>49</item>
+				<item>50</item>
+				<item>51</item>
+				<item>52</item>
+				<item>53</item>
+				<item>54</item>
+				<item>55</item>
+				<item>56</item>
+				<item>57</item>
+				<item>58</item>
+				<item>59</item>
+				<item>60</item>
+				<item>61</item>
+				<item>62</item>
+				<item>63</item>
+				<item>64</item>
+				<item>65</item>
+				<item>66</item>
+				<item>67</item>
+				<item>68</item>
+				<item>69</item>
+				<item>70</item>
+				<item>71</item>
+				<item>72</item>
+				<item>73</item>
+				<item>74</item>
+				<item>75</item>
+				<item>76</item>
+				<item>77</item>
+				<item>78</item>
+				<item>79</item>
+				<item>80</item>
+				<item>81</item>
+				<item>82</item>
+				<item>83</item>
+				<item>84</item>
+				<item>85</item>
+				<item>86</item>
+				<item>87</item>
+				<item>88</item>
+				<item>89</item>
+				<item>90</item>
+				<item>91</item>
+				<item>92</item>
+				<item>93</item>
+				<item>94</item>
+				<item>95</item>
+				<item>96</item>
+				<item>97</item>
+				<item>98</item>
+				<item>99</item>
+				<item>100</item>
+			</content>
+			<selection>20</selection>
+			<pos>448,288</pos>
+			<size>112,24</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxButton" name="ID_BUTTON4" variable="RandomButton" member="yes">
+			<label>Random Visual</label>
+			<pos>440,456</pos>
+			<size>112,29</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnRandomButtonClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON5" variable="FullScreenButton" member="yes">
+			<label>Full Screen</label>
+			<pos>360,504</pos>
+			<size>192,29</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton1Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticBitmap" name="ID_STATICBITMAP1" variable="StaticBitmap1" member="yes">
+			<bitmap>graphics/vsxu.bmp</bitmap>
+			<pos>8,382</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX1" variable="CheckBox1" member="yes">
+			<pos>44,184</pos>
+			<size>24,24</size>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX2" variable="CheckBox2" member="yes">
+			<pos>76,184</pos>
+			<size>24,24</size>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX3" variable="CheckBox3" member="yes">
+			<pos>108,184</pos>
+			<size>24,24</size>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX4" variable="CheckBox4" member="yes">
+			<label>Label</label>
+			<pos>140,184</pos>
+			<size>24,24</size>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX5" variable="CheckBox5" member="yes">
+			<pos>170,184</pos>
+			<size>24,24</size>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX6" variable="CheckBox6" member="yes">
+			<pos>204,184</pos>
+			<size>24,24</size>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX7" variable="CheckBox7" member="yes">
+			<pos>236,184</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX8" variable="CheckBox8" member="yes">
+			<pos>268,184</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX9" variable="CheckBox9" member="yes">
+			<pos>300,184</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX10" variable="CheckBox10" member="yes">
+			<pos>332,184</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX11" variable="CheckBox11" member="yes">
+			<pos>364,184</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX12" variable="CheckBox12" member="yes">
+			<pos>396,184</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX13" variable="CheckBox13" member="yes">
+			<pos>428,184</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX14" variable="CheckBox14" member="yes">
+			<pos>460,184</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX15" variable="CheckBox15" member="yes">
+			<pos>492,184</pos>
+		</object>
+		<object class="wxCheckBox" name="ID_CHECKBOX16" variable="CheckBox16" member="yes">
+			<pos>524,184</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT25" variable="StaticText25" member="yes">
+			<label>Exempt</label>
+			<pos>0,192</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT26" variable="StaticText26" member="yes">
+			<label>notes: VSXu takes 20-30 seconds to load and Lightput and VSXu will not respond while VSXu is&#x0A;loading. Use Alt-tab to stop the visualizer after going into fullscreen mode.&#x0A;If you have audio issues using Lightput-&gt;VSXu, try starting VSXu from within lightput before &#x0A;opening the audio application.</label>
+			<pos>16,320</pos>
+			<size>544,64</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxTimer" name="ID_TIMER1" variable="Timer1" member="yes">
+			<handler function="OnTimer1Trigger" entry="EVT_TIMER" />
+		</object>
+	</object>
+</wxsmith>

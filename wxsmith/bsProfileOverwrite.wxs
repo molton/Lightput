@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="bsProfileOverwrite">
+		<title>Save or Cancel Changes</title>
+		<size>327,111</size>
+		<id_arg>0</id_arg>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>There are changes made to the Light Sequencer profiles,&#x0A;do you want to save or cancel those changes?</label>
+			<pos>32,16</pos>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+			<label>Save Changes</label>
+			<pos>24,64</pos>
+			<size>128,23</size>
+			<handler function="OnButton1Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
+			<label>Cancel Changes</label>
+			<pos>184,64</pos>
+			<size>128,23</size>
+			<handler function="OnButton2Click1" entry="EVT_BUTTON" />
+		</object>
+	</object>
+</wxsmith>

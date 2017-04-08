@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="H24RenameProfile">
+		<title>Rename selected profile</title>
+		<size>376,131</size>
+		<id_arg>0</id_arg>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes">
+			<pos>32,48</pos>
+			<size>296,21</size>
+			<focused>1</focused>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Enter the new name for the selected profile</label>
+			<pos>32,16</pos>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+			<label>Ok</label>
+			<pos>32,88</pos>
+			<size>120,23</size>
+			<handler function="OnButton1Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
+			<label>Cancel&#x0A;</label>
+			<pos>208,88</pos>
+			<size>120,23</size>
+			<handler function="OnButton2Click" entry="EVT_BUTTON" />
+		</object>
+	</object>
+</wxsmith>

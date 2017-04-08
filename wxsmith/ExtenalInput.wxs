@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="ExtenalInput">
+		<title>Lightput External Input 0.1</title>
+		<pos>100,100</pos>
+		<size>470,297</size>
+		<id_arg>0</id_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<label>External Input Information</label>
+			<pos>24,24</pos>
+			<size>416,208</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>Lightput External Input monitors the contents of a text file in order to&#x0A;control lighting.  To interface with Lightput, you simply need to manipulate&#x0A;the text file while Lightput External Input is active.&#x0A;&#x0A;The text file is named &quot;input.lightput&quot;, it is under the directory&#x0A; &quot;./lightput/light__programs/&quot;.&#x0A;&#x0A;There are 16 lines in the text file, each line represents a Lightput channel&#x0A;and should contain a value between 0 and 255.&#x0A;(0 lights completely off, 255 lights completely on, etc.)&#x0A;&#x0A;Lightput External Input is active until this window is closed.</label>
+			<pos>32,56</pos>
+			<size>408,156</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+			</font>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="HideButton" member="yes">
+			<label>Hide Lightput</label>
+			<pos>40,248</pos>
+			<size>136,23</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+			</font>
+			<handler function="OnButton1Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="CloseButton" member="yes">
+			<label>Close External Input</label>
+			<pos>264,248</pos>
+			<size>136,23</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+			</font>
+			<handler function="OnButton2Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxTimer" name="ID_TIMER1" variable="EItimer" member="yes">
+			<handler function="OnEItimerTrigger" entry="EVT_TIMER" />
+		</object>
+	</object>
+</wxsmith>

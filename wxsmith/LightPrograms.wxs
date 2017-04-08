@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="LightPrograms">
+		<title>Light Programs</title>
+		<pos>200,200</pos>
+		<size>283,305</size>
+		<id_arg>0</id_arg>
+		<style>wxCAPTION</style>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxButton" name="ID_BUTTON1" variable="LightSequencerButton" member="yes">
+			<label>Light&#x0A;Sequencer</label>
+			<pos>24,24</pos>
+			<size>104,40</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton1Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON4" variable="LightScriptsButton" member="yes">
+			<label>Light Scripts</label>
+			<pos>24,80</pos>
+			<size>104,40</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton4Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="LightAlarmClockButton" member="yes">
+			<label>Light&#x0A;Alarm Clock</label>
+			<pos>24,192</pos>
+			<size>104,40</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton2Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON5" variable="H24TimerButton" member="yes">
+			<label>24-Hour &#x0A;Light Timer</label>
+			<pos>24,136</pos>
+			<size>104,40</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton5Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON7" variable="MidiButton" member="yes">
+			<label>Midi&#x0A;Control</label>
+			<pos>152,80</pos>
+			<size>104,40</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnMidiButtonClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON3" variable="VSXuButton" member="yes">
+			<label>Lightput&#x0A;External Input</label>
+			<pos>152,136</pos>
+			<size>104,40</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton3Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON8" variable="CloseButton" member="yes">
+			<label>Close</label>
+			<pos>88,248</pos>
+			<size>104,40</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton8Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON6" variable="ActualVSXuButton" member="yes">
+			<label>VSXu Audio&#x0A;Visualizer</label>
+			<pos>152,24</pos>
+			<size>104,40</size>
+			<enabled>0</enabled>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnActualVSXuButtonClick" entry="EVT_BUTTON" />
+		</object>
+	</object>
+</wxsmith>

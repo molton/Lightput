@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="lsSaveDialog">
+		<size>395,154</size>
+		<id_arg>0</id_arg>
+		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrlFileName" member="yes">
+			<pos>32,64</pos>
+			<size>168,27</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText_A1" member="yes">
+			<label>Save the current Light Script as</label>
+			<pos>32,24</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText_A2" member="yes">
+			<label>.ls (added automatically)</label>
+			<pos>200,72</pos>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="SaveButton_sd" member="yes">
+			<label>Save</label>
+			<pos>32,112</pos>
+			<size>144,29</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton1Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="CancelButton_sd" member="yes">
+			<label>Cancel</label>
+			<pos>216,112</pos>
+			<size>144,29</size>
+			<font>
+				<size>8</size>
+				<style>normal</style>
+				<weight>normal</weight>
+				<underlined>0</underlined>
+				<family>swiss</family>
+				<face>Sans</face>
+			</font>
+			<handler function="OnButton2Click" entry="EVT_BUTTON" />
+		</object>
+	</object>
+</wxsmith>

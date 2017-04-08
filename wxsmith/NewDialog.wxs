@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="NewDialog">
+		<title>Change Profile Sets</title>
+		<size>433,355</size>
+		<id_arg>0</id_arg>
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER</style>
+		<handler function="OnInit" entry="EVT_INIT_DIALOG" />
+		<object class="wxListBox" name="ID_LISTBOX1" variable="ListBox1" member="yes">
+			<default>-1</default>
+			<pos>48,32</pos>
+			<size>336,152</size>
+			<handler function="OnListBox1Select" entry="EVT_LISTBOX_DCLICK" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON4" variable="Button4" member="yes">
+			<label>Load Profile Set</label>
+			<pos>48,232</pos>
+			<size>336,23</size>
+			<handler function="OnButton4Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON5" variable="Button5" member="yes">
+			<label>Copy the Current Profile Set</label>
+			<pos>48,264</pos>
+			<size>336,23</size>
+			<handler function="OnButton5Click" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+			<label>Cancel</label>
+			<pos>48,304</pos>
+			<size>336,32</size>
+			<handler function="OnButton1Click1" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>Lightput Profile Set Files</label>
+			<pos>48,8</pos>
+		</object>
+		<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
+			<label>Create a New Empty Profile Set</label>
+			<pos>48,200</pos>
+			<size>336,23</size>
+			<handler function="OnButton2Click" entry="EVT_BUTTON" />
+		</object>
+	</object>
+</wxsmith>

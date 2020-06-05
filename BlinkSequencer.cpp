@@ -375,7 +375,7 @@ BlinkSequencer::BlinkSequencer(wxWindow* parent,wxWindowID id,const wxPoint& pos
 	StaticBox4 = new wxStaticBox(this, ID_STATICBOX4, _("Current Channel"), wxPoint(56,144), wxSize(160,56), 0, _T("ID_STATICBOX4"));
 	StaticBox3 = new wxStaticBox(this, ID_STATICBOX3, _("Light Sequence Configuration"), wxPoint(40,8), wxSize(344,104), 0, _T("ID_STATICBOX3"));
 	StaticBox2 = new wxStaticBox(this, ID_STATICBOX2, _("Light Sequence Profiles"), wxPoint(392,8), wxSize(432,104), 0, _T("ID_STATICBOX2"));
-	Choice1 = new wxChoice(this, ID_CHOICE1, wxPoint(215,28), wxSize(56,21), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE1"));
+	Choice1 = new wxChoice(this, ID_CHOICE1, wxPoint(215,28), wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE1"));
 	Choice1->SetSelection( Choice1->Append(_("2")) );
 	Choice1->Append(_("3"));
 	Choice1->Append(_("4"));
@@ -413,7 +413,7 @@ BlinkSequencer::BlinkSequencer(wxWindow* parent,wxWindowID id,const wxPoint& pos
 	StaticText10 = new wxStaticText(this, ID_STATICTEXT10, _("10"), wxPoint(676,136), wxDefaultSize, 0, _T("ID_STATICTEXT10"));
 	StaticText11 = new wxStaticText(this, ID_STATICTEXT11, _("11"), wxPoint(724,136), wxDefaultSize, 0, _T("ID_STATICTEXT11"));
 	StaticText12 = new wxStaticText(this, ID_STATICTEXT12, _("12"), wxPoint(772,136), wxDefaultSize, 0, _T("ID_STATICTEXT12"));
-	Choice3 = new wxChoice(this, ID_CHOICE3, wxPoint(80,168), wxSize(112,21), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE3"));
+	Choice3 = new wxChoice(this, ID_CHOICE3, wxPoint(80,168), wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE3"));
 	Choice3->SetSelection( Choice3->Append(_("Channel 1")) );
 	Choice3->Append(_("Channel 2"));
 	Choice3->Append(_("Channel 3"));
@@ -489,7 +489,7 @@ BlinkSequencer::BlinkSequencer(wxWindow* parent,wxWindowID id,const wxPoint& pos
 	StaticText15 = new wxStaticText(this, ID_STATICTEXT15, _("Or"), wxPoint(276,56), wxDefaultSize, 0, _T("ID_STATICTEXT15"));
 	wxFont StaticText15Font(8,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
 	StaticText15->SetFont(StaticText15Font);
-	Choice2 = new wxChoice(this, ID_CHOICE2, wxPoint(128,376), wxSize(40,21), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE2"));
+	Choice2 = new wxChoice(this, ID_CHOICE2, wxPoint(128,376), wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE2"));
 	Choice2->SetSelection( Choice2->Append(_("1")) );
 	Choice2->Append(_("2"));
 	Choice2->Append(_("3"));
@@ -678,13 +678,13 @@ if (islightprogramonstartup)
                 Button9->Enable(false);
 
                 //beattime = wxAtoi(TextCtrl1->GetValue());
-                lastbeat = SequencerBeats [(ListBox1->GetSelection())+1];
-                bsbeattime = SequencerTime[(ListBox1->GetSelection())+1];
+                lastbeat = SequencerBeats [(ListBox1->GetSelection())];
+                bsbeattime = SequencerTime[(ListBox1->GetSelection())];
                 ///Timer1.Start(bsbeattime,false);
                 //beat = 1;
                 ispaused = false;
                 changebeat();
-                beat = Choice2->GetSelection()+1;
+                beat = Choice2->GetSelection();
 
 
                 beatcounter();
@@ -2313,9 +2313,11 @@ void BlinkSequencer::updateprofile (void)
     sequencercurrentprofile = ListBox1->GetSelection()+1;
 */
 
-    Choice1->SetSelection(SequencerBeats[ListBox1->GetSelection()]);
+    Choice1->SetSelection(SequencerBeats[ListBox1->GetSelection()+1]);
 
-    wxString convertValue = wxString::Format(wxT("%i"),SequencerTime[ListBox1->GetSelection()]);
+    //wxString convertValue = wxString::Format(wxT("%i"),SequencerTime[ListBox1->GetSelection()+1]);
+    wxString convertValue;
+    convertValue << SequencerTime[ListBox1->GetSelection()+1];
     TextCtrl1->SetValue(convertValue);
 
     sequencercurrentprofile = ListBox1->GetSelection();

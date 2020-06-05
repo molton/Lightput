@@ -1026,9 +1026,9 @@ LightputFrequency = 60;
 
     //this handles the window size
     if (dmxmode == 4) {
-    SetMinSize(wxSize(445,530));
-    SetMaxSize(wxSize(445,530));
-    SetClientSize(wxSize(445,530));
+    //SetMinSize(wxSize(445,530));
+    //SetMaxSize(wxSize(445,530));
+    SetClientSize(wxSize(445,800));
     Button5->SetLabel(wxT("Switch to 16-Channel DMX Mode"));
     Slider5->Enable(false);
     Slider6->Enable(false);
@@ -1044,9 +1044,9 @@ LightputFrequency = 60;
     Slider16->Enable(false);
     } else
     {
-    SetMaxSize(wxSize(840,530));
-    SetClientSize(wxSize(840,530));
-    SetMinSize(wxSize(840,530));
+    //SetMaxSize(wxSize(840,530));
+    SetClientSize(wxSize(840,800));
+    //SetMinSize(wxSize(840,530));
     dmxmode = 16;
     Button5->SetLabel(wxT("Switch to 4-Channel DMX Mode"));
     }
@@ -2441,9 +2441,9 @@ void gui10Frame::OnButton5Click(wxCommandEvent& event)
 {
     if (dmxmode == 4) {
     dmxmode = 16;
-    SetMaxSize(wxSize(840,530));
-    SetClientSize(wxSize(840,530));
-    SetMinSize(wxSize(840,530));
+    //SetMaxSize(wxSize(840,530));
+    SetClientSize(wxSize(840,600));
+    //SetMinSize(wxSize(840,530));
     Button5->SetLabel(wxT("Switch to 4-Channel DMX Mode"));
 
     Slider5->Enable(true);
@@ -2462,9 +2462,9 @@ void gui10Frame::OnButton5Click(wxCommandEvent& event)
     }
     else {
     dmxmode = 4;
-    SetMinSize(wxSize(445,530));
-    SetMaxSize(wxSize(445,530));
-    SetClientSize(wxSize(445,530));
+    //SetMinSize(wxSize(445,530));
+    //SetMaxSize(wxSize(445,530));
+    SetClientSize(wxSize(445,600));
     Button5->SetLabel(wxT("Switch to 16-Channel DMX Mode"));
 
     Slider5->Enable(false);

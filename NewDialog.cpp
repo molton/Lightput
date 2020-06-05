@@ -72,7 +72,7 @@ NewDialog::NewDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxS
 	Button1 = new wxButton(this, ID_BUTTON1, _("Cancel"), wxPoint(48,304), wxSize(336,32), 0, wxDefaultValidator, _T("ID_BUTTON1"));
 	StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("Lightput Profile Set Files"), wxPoint(48,8), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
 	Button2 = new wxButton(this, ID_BUTTON2, _("Create a New Empty Profile Set"), wxPoint(48,200), wxSize(336,23), 0, wxDefaultValidator, _T("ID_BUTTON2"));
-	
+
 	Connect(ID_LISTBOX1,wxEVT_COMMAND_LISTBOX_DOUBLECLICKED,(wxObjectEventFunction)&NewDialog::OnListBox1Select);
 	Connect(ID_BUTTON4,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&NewDialog::OnButton4Click);
 	Connect(ID_BUTTON5,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&NewDialog::OnButton5Click);
@@ -84,7 +84,7 @@ NewDialog::NewDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxS
 //this code block gets
 //the contents of that directory aand puts it into files wxStringArray type
 wxDir dir(wxGetCwd());
-files = 0;
+//files = 0;
 dir.GetAllFiles(profiledirectory, &files,  wxT("*.lightput"), wxDIR_DEFAULT);
 ListBox1->Clear();
 //writes "files" to listbox1

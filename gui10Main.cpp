@@ -1502,6 +1502,7 @@ void gui10Frame::loadoptions(void)
 {
 wxTextFile ofile;
 //this line actually opens the file options.lightput
+ofile.Clear();
 ofile.Open(directory + wxT("options.lightput"), wxConvISO8859_1);
 int count;
 wxString buffer;
@@ -1603,6 +1604,7 @@ int currentvalue = 0;
 int profilecount = 0;
 //opens a new instance of the class wxTextFile, called pfile
 wxTextFile pfile;
+pfile.Clear();
 //sets a wxChar to hold the comma to search for (used to be a comma)
 wxChar comma = wxT('!');
 wxChar atsymbol = wxT('@');
@@ -1636,6 +1638,7 @@ isnamevariable = true;
 wxString buffer;
 
 ListBox1->Clear();
+ListBox1->Update();
 do {
     //I initially tried to use another do loop for this code, but the GetNextLine function was
     //not working propperly that way, this basically advances the current line these loops are working with
@@ -2525,6 +2528,7 @@ void gui10Frame::OnClose(wxCloseEvent& event)
             Dlg.ShowModal();
             if (yesorno == false) return;
             }
+            spfile.Clear();
         spfile.Create(profiledirectory + profilefilename);
         wxString v1pad;
         wxString v1padded;
@@ -2898,6 +2902,7 @@ void gui10Frame::saveprofile(void)
         Dlg.ShowModal();
         if (yesorno == false) return;
         }
+        spfile.Clear();
     spfile.Create(profiledirectory + profilefilename);
     wxString v1pad;
     wxString v1padded;
@@ -4426,6 +4431,7 @@ void gui10Frame::saveoptions(void)
     wxString o13; //light program selection
 
     wxTextFile sofile;
+    sofile.Clear();
     sofile.Create(wxT("options.lightput"));
 
     //wxMessageBox (option_defaultprofile, o1);

@@ -21,6 +21,13 @@
 #include "bsDeleteProfile.h"
 #include "bsProfileOverwrite.h"
 
+
+//apparently this stuff worked fine on older linux / wx widgets versions but
+//but on this software certain things need to be set to initialize
+//once and then never happen again
+
+bool bool_is_initialized;
+
 bool bsischanged;
 bool istempomeasure;
 wxString bsnewprofileValue;
@@ -1936,13 +1943,14 @@ void BlinkSequencer::savenewprofile(void)
 void BlinkSequencer::loadprofiles(void)
 {
 wxTextFile bsfile;
+bsfile.Clear();
 bsfile.Open(blinksequencerfilename, wxConvISO8859_1);
 //this line checks if the FILE HAS 3 LINES OR LESS, indicationg that there are no profiles
 //then returns out of the profile loading function
 
 //new idea, get line count, divide by 19, thats number of profiles
 //subtract 1 from the line count to fix loading bug
-int numberoflines = bsfile.GetLineCount() - 1;
+int numberoflines = bsfile.GetLineCount() ;
 //add 1 to the value to fix the assignment of bsnumberofprofiles
 bsnumberofprofiles = (numberoflines + 1) / 20;
 
@@ -2296,13 +2304,21 @@ updateprofile();
 
 void BlinkSequencer::updateprofile (void)
 {
-
+/*
     Choice1->SetSelection(SequencerBeats[ListBox1->GetSelection()+1]);
 
     wxString convertValue = wxString::Format(wxT("%i"),SequencerTime[ListBox1->GetSelection()+1]);
     TextCtrl1->SetValue(convertValue);
 
     sequencercurrentprofile = ListBox1->GetSelection()+1;
+*/
+
+    Choice1->SetSelection(SequencerBeats[ListBox1->GetSelection()]);
+
+    wxString convertValue = wxString::Format(wxT("%i"),SequencerTime[ListBox1->GetSelection()]);
+    TextCtrl1->SetValue(convertValue);
+
+    sequencercurrentprofile = ListBox1->GetSelection();
 
     if (SequencerExemptChannels [sequencercurrentprofile][0] == true) CheckBox2->SetValue(true);
     else CheckBox2->SetValue(false);
@@ -2337,14 +2353,20 @@ void BlinkSequencer::updateprofile (void)
     if (SequencerExemptChannels [sequencercurrentprofile][15] == true) CheckBox17->SetValue(true);
     else CheckBox17->SetValue(false);
 
-
+/*
     lastbeat = SequencerBeats [(ListBox1->GetSelection())+1];
     bsbeattime = SequencerTime[(ListBox1->GetSelection())+1];
+*/
+
+
+    lastbeat = SequencerBeats [(ListBox1->GetSelection())];
+    bsbeattime = SequencerTime[(ListBox1->GetSelection())];
+
 
     updatechannels();
     changebeat();
     updatelabels();
-    updatestartbeatbox();
+    //updatestartbeatbox();
 /*
     wxString displayValue = wxString::Format(wxT("%i"),SequencerExemptChannels [ListBox1->GetSelection()+1][0]);
     wxMessageBox(wxT("Channel 1"),displayValue);

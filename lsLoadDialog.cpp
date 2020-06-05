@@ -42,14 +42,14 @@ lsLoadDialog::lsLoadDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,con
 	StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("Available Light Scripts"), wxPoint(32,16), wxDefaultSize, 0, _T("ID_STATICTEXT1"));
 	wxFont StaticText1Font(8,wxSWISS,wxFONTSTYLE_NORMAL,wxNORMAL,false,_T("Sans"),wxFONTENCODING_DEFAULT);
 	StaticText1->SetFont(StaticText1Font);
-	
+
 	Connect(ID_BUTTON1,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&lsLoadDialog::OnButton1Click);
 	Connect(ID_BUTTON2,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&lsLoadDialog::OnButton2Click);
 	//*)
     lsisloading = false;
 
 	wxDir lsdir(wxGetCwd());
-    lsfiles = 0;
+    //lsfiles = 0;
     lsdir.GetAllFiles(wxT("./light_programs/light_scripts/"), &lsfiles,  wxT("*.ls"), wxDIR_FILES);
     ListBox1->Clear();
 

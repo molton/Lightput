@@ -1,3 +1,4 @@
+/*
 #include "MidiControl.h"
 
 //(*InternalHeaders(MidiControl)
@@ -1025,3 +1026,5 @@ void MidiControl::OnButton1Click2(wxCommandEvent& event)
     Channel_16_Midi_Bank = -1;
     StaticText35->SetLabel(wxT("Not Set"));
 }
+
+*/

@@ -9,8 +9,8 @@
 #include "BlinkSequencer.h"
 #include "AlarmClock.h"
 #include "H24Timer.h"
-#include "VSXuAudioVisualizer.h"
-#include "MidiControl.h"
+//#include "VSXuAudioVisualizer.h"
+//#include "MidiControl.h"
 #include "LightScripts.h"
 #include "ExtenalInput.h"
 
@@ -309,13 +309,13 @@ void LightPrograms::EnableButtons (void)
 void LightPrograms::OnMidiButtonClick(wxCommandEvent& event)
 {
 
-    isprofilemode = false;
-    DisableButtons();
-    isMidiControlmode = true;
+    //isprofilemode = false;
+    //DisableButtons();
+    //isMidiControlmode = true;
 
-    MidiControl MidiDlg(0);
-    MidiDlg.ShowModal();
-    EnableButtons();
+//    MidiControl MidiDlg(0);
+  //  MidiDlg.ShowModal();
+    //EnableButtons();
 
 }
 
@@ -323,14 +323,14 @@ void LightPrograms::OnMidiButtonClick(wxCommandEvent& event)
 
 void LightPrograms::OnActualVSXuButtonClick(wxCommandEvent& event)
 {
-    DisableButtons();
-    isprofilemode = false;
+    //DisableButtons();
+    //isprofilemode = false;
 
-    VSXuAudioVisualizer VSXuDlg(0);
-    VSXuDlg.ShowModal();
+    //VSXuAudioVisualizer VSXuDlg(0);
+   // VSXuDlg.ShowModal();
 
 
-    isprofilemode = true;
-    isVSXumode = false;
-    EnableButtons();
+    //isprofilemode = true;
+    //isVSXumode = false;
+    //EnableButtons();
 }

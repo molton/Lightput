@@ -13,12 +13,17 @@ sorry for the non-existant naming conventions and bad labels, this was an early 
 
 I'm using Ubuntu 18.04 and I had to use dconf-editor to change /org/gnome/nautilus/preferences/executable-text-activation from 'display' to 'ask' because when set to display linux just kept trying to display the executable as an image
 
+# This doesn't work with all USB RS-485 serial devices
+
+This does not work with all rs-485 USB devices for whatever reason, even ones that claim to use the FTDI chip, it works great with some though.  I tried to get it to work with all of them in windows and linux in the past but I could not.  The one I use is a little blue box with a oval globe raised in the plastic on top, one of them old db-9 connectors, and a silvery usb cable coming out. 
+
+
 # Getting access to the FTDI USB device in Linux
 
 libftd2xx linux installation guide
 https://www.ftdichip.com/Support/Documents/AppNotes/AN_220_FTDI_Drivers_Installation_Guide_for_Linux.pdf
 
-This does not work with all FTDI USB devices for whatever reason, it works great with some though.  I tried to get it to work with all of them in windows and linux in the past but I could not.  In order for lightput to get access to the USB FTDI serial device in linux, you need to disable some things linux typically automatically enables with these lines from a terminal window.
+In order for lightput to get access to the USB FTDI serial device in linux, you need to disable some things linux typically automatically enables with these lines from a terminal window.
 
 
 sudo rmmod ftdi_sio

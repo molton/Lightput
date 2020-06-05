@@ -17,24 +17,37 @@ https://www.ftdichip.com/Support/Documents/AppNotes/AN_220_FTDI_Drivers_Installa
 
 This does not work with all FTDI USB devices for whatever reason, it works great with some though.  I tried to get it to work with all of them in windows and linux in the past but I could not.  In order for lightput to get access to the USB FTDI serial device in linux, you need to disable some things linux typically automatically enables with these lines from a terminal window.
 
+
 sudo rmmod ftdi_sio
+
 sudo rmmod usbserial
+
 
 then run lsusb
 
+
 lsusb
+
 
 look for the FTDI serial device in the list, heres an example of the lsusb output
 
 Bus 005 Device 003: ID 046d:c077 Logitech, Inc. M105 Optical Mouse
+
 Bus 005 Device 004: ID 0403:6001 Future Technology Devices International, Ltd FT232 Serial (UART) IC
+
 Bus 005 Device 005: ID 04f2:0402 Chicony Electronics Co., Ltd Genius LuxeMate i200 Keyboard
+
 
 so the ftdi device is on bus 5, device 4, using that information you'd edit this line accordingly
 
+
 sudo chmod a+rw /dev/bus/usb/005/004
 
+
 then lightput should have access to the serial device
+
+
+
 
 
 
